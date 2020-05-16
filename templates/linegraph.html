@@ -2,11 +2,18 @@
 
 {% block linegraph %} 
 
-<div style="width: 80%;">
-	<canvas id="line-chart"></canvas>
+<div style="width: 60%;">
+	<!-- <canvas id="line-chart"></canvas>
+	<canvas id="bar-chart-horizontal"></canvas>
+	<canvas id="myChart" width="400" height="400"></canvas> -->
+	<canvas id="line-chart-ph" width="800" height="450"></canvas>
+
 </div>
+<!-- <p id="demo">hello</p> -->
 
 
 
-
+<script type="text/javascript">
+	var ph = JSON.parse('{{ ph|tojson|safe }}');
+</script>
 {% endblock %}
