@@ -7,13 +7,17 @@
 	<canvas id="bar-chart-horizontal"></canvas>
 	<canvas id="myChart" width="400" height="400"></canvas> -->
 	<canvas id="line-chart-ph" width="800" height="450"></canvas>
-
+	<!-- <p id="demo"></p> -->
 </div>
-<!-- <p id="demo">hello</p> -->
+
 
 
 
 <script type="text/javascript">
-	var ph = JSON.parse('{{ ph|tojson|safe }}');
+	
+	var ph_confirmed = JSON.parse('{{ ph_confirmed|tojson|safe }}');
+	var ph_recoveries = JSON.parse('{{ ph_recoveries|tojson|safe }}');
+	var ph_deaths = JSON.parse('{{ ph_deaths|tojson|safe }}');
+	var ph_dates = JSON.parse('{{ ph_dates|tojson|safe }}');
 </script>
 {% endblock %}
