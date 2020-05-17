@@ -8,4 +8,3 @@ sgp_confirmed_total = sgp_data[-1]["confirmed"]
 sgp_recoveries_total = sgp_data[-1]["recovered"]
 sgp_deaths_total = sgp_data[-1]["deaths"]
 
-print(sgp_data[-1])
