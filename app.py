@@ -13,13 +13,13 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 #DB
-# app.config['MYSQL_USER'] = 'bd7771d9865e44'
-# app.config['MYSQL_PASSWORD'] = 'f2aa6ce9'
-# app.config['MYSQL_HOST'] = 'us-cdbr-east-06.cleardb.net'
-# app.config['MYSQL_DB'] = 'heroku_f363084f28a2d9c'
+# app.config['MYSQL_USER'] = ''
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_HOST'] = ''
+# app.config['MYSQL_DB'] = ''
 # app.config['MYSQL_CURSORCLASS'] = 'DictCursor' #a cursor is a connection to let us run methods for queries. We set it as a dictionary
-app.config['MYSQL_USER'] = 'bermyllerazon'
-app.config['MYSQL_PASSWORD'] = 'L14brmk993014'
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_DB'] = 'datasetb'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor' #a cursor is a connection to let us run methods for queries. We set it as a dictionary
