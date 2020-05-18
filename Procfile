@@ -1,1 +1,1 @@
-web: gunicorn covid19_127.app:app
+web: gunicorn app:app --log-file=-
