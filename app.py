@@ -49,26 +49,24 @@ def dataseta():
 
 
 
-
 @app.route('/datasetb')
 def datasetb():
 	#SQL queries
-	cur_1 = mysql.connection.cursor()
-	cur_1.execute('''SELECT DISTINCT (AgeGroup) FROM datasetb''')
-
-	cur_2 = mysql.connection.cursor()
-	cur_2.execute('''SELECT COUNT(DISTINCT (AgeGroup)) FROM datasetb''')
-
-	Count = cur_2.fetchall()
-	AgeGroupCur = cur_1.fetchall()
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup''')
+	
+	result = cur.fetchall()
 	
 	AgeGroup = []
+	AgeGroup_Count = []
 
-	for values in AgeGroupCur:
-		AgeGroup.append(values['AgeGroup'])
+	for values in result:
+		#print(values["AgeGroup"], values["total_count"])
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+	print(AgeGroup_Count)
 
-
-	return render_template('datasetb.html', labels = AgeGroup)
+	return render_template('datasetb.html', labels = AgeGroup, data = AgeGroup_Count)
 
 if __name__ == "__main__":
     app.run(debug=True)
