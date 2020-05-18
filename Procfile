@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn covid19_127.app:app
