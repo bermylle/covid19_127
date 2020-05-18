@@ -9,7 +9,7 @@ verify_ssl = true
 flask-mysql = "*"
 flask-mysqldb = "*"
 gunicorn = "*"
-flask = "*"
+Flask = "==1.1.2"
 heroku = "*"
 mysql-connector = "*"
 
