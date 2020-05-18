@@ -1,9 +1,3 @@
-// var ph_recoveries = '{{ ph_recoveries|tojson|safe }}';
-// var ph_deaths = '{{ ph_deaths|tojson|safe }}';
-// var ph_dates = '{{ ph_dates|tojson|safe }}';
-// var ph_confirmed = '{{ ph_confirmed|tojson|safe }}';
-// error if declared here.
-
 // [Data Set A]
 // Line graph 
 var config = {
@@ -193,3 +187,4 @@ var config = {
 var ctx = document.getElementById("bar-chart-death-cases");
 var chart = new Chart(ctx, config);
 //document.getElementById("demo").innerHTML = ph_confirmed;
+

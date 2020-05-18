@@ -1,0 +1,13 @@
+{% extends "dashboard.html" %}
+
+{% block datasetb %} 
+
+<div style="width: 60%;">
+	<canvas id="bar-graph-agegrp" width="800" height="450"></canvas>
+</div>
+
+<script type="text/javascript">
+	var labels = JSON.parse('{{ labels|tojson|safe }}')
+</script>
+
+{% endblock %}

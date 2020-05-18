@@ -24,10 +24,11 @@
 
    {% include 'navbar.html' %}
 
-   {% block linegraph %} {% endblock %}
+   {% block dataseta %} {% endblock %}
+   {% block datasetb %} {% endblock %}
 
 </body>
 	<script src="{{url_for('static', filename='js/datasetA.js')}}"></script>
-	
+	<script src="{{url_for('static', filename='js/datasetB.js')}}"></script>
 	
 </html>
