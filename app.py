@@ -13,11 +13,11 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 #DB
-app.config['MYSQL_USER'] = ''
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_USER'] = 'bd7771d9865e44'
+app.config['MYSQL_PASSWORD'] = 'f2aa6ce9'
 app.config['MYSQL_HOST'] = 'us-cdbr-east-06.cleardb.net'
-app.config['MYSQL_DB'] = ''
-app.config['MYSQL_CURSORCLASS'] = '' 
+app.config['MYSQL_DB'] = 'heroku_f363084f28a2d9c'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor' 
 # app.config['MYSQL_USER'] = ''
 # app.config['MYSQL_PASSWORD'] = ''
 # app.config['MYSQL_HOST'] = '127.0.0.1'
