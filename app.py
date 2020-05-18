@@ -113,6 +113,6 @@ def datasetb():
 		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+     app.run(debug=app.config['DEBUG'], port=app.config['PORT'])
 
 app.run()
