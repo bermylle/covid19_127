@@ -11,6 +11,7 @@ flask-mysqldb = "*"
 Flask = "==1.1.2"
 heroku = "*"
 mysql-connector = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
