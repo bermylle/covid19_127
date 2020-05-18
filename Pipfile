@@ -9,6 +9,9 @@ verify_ssl = true
 flask-mysql = "*"
 flask-mysqldb = "*"
 gunicorn = "*"
+flask = "*"
+heroku = "*"
+mysql-connector = "*"
 
 [requires]
 python_version = "3.7"
