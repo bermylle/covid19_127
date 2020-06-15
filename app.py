@@ -88,7 +88,6 @@ def datasetb():
 		sex_data.append(values["Sex"])
 		sex_data_count.append(values["total_count"])
 
-
 	# [RegProvRes]
 	cur_rpr = mysql.connection.cursor()
 	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
