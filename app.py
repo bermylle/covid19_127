@@ -28,7 +28,7 @@ mysql = MySQL(app)
 @app.route('/')
 @app.route('/home')
 def index():
-	return render_template('dashboard.html')
+	return render_template('homepage.html')
 
 
 @app.route('/dataseta')

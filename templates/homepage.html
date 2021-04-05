@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% extends "dashboard.html" %} {% block homepage %}
+
+<body>
+    <header class="text-center text-white masthead" style="background: url(&quot;assets/img/header.jpg&quot;);background-size: cover;">
+        <div class="overlay" style="filter: blur(0px) brightness(0%);opacity: 0.50;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto position-relative">
+                    <h1 class="mb-5">COVID-19 Dashboard</h1>
+                    <p>A Partial Requirement for CMSC 127</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="text-center bg-light features-icons">
+        <div class="container">
+            <section class="team-boxed">
+                <div class="container" style="color: rgb(49, 52, 55);background: #f8f9fa;">
+                    <div class="intro">
+                        <h2 class="text-center">COVID-19</h2>
+                        <p class="text-center">COVID-19 is a disease caused by SARS-CoV-2 with symptoms similar to flu like runny nose, sore throat, cough, and headaches. People with weak immune system are more susceptible to this virus.</p>
+                    </div>
+                    <div class="row people">
+                        <div class="col-md-6 col-lg-6 col-xxl-5 offset-xxl-1 item">
+                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="assets/img/a.jpg">
+                                <h3 class="name">Data Set A</h3>
+                                <p class="title">overall</p>
+                                <p class="text-center description">Contains the number of cases, recoveries, and deaths in the Philippines along with other Asian countries like Indonesia, Singapore, Malaysia, and Korea</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xxl-5 item">
+                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="assets/img/b.jpg">
+                                <h3 class="name">Data Set B</h3>
+                                <p class="title">Demographics</p>
+                                <p class="description">Demographic statistics of COVID-19 cases in the Philippines by age, gender, province, and city.&nbsp; Also includes certain cases from the NCR.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer class="bg-light footer" style="border-width: 1px;border-style: solid;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-12 col-xxl-12 text-center text-lg-start my-auto h-100">
+                    <p class="text-center text-muted small mb-4 mb-lg-0">© Covid 19 Dashboard 2021. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+{% endblock %}
