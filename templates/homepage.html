@@ -2,7 +2,7 @@
 {% extends "dashboard.html" %} {% block homepage %}
 
 <body>
-    <header class="text-center text-white masthead" style="background: url(&quot;assets/img/header.jpg&quot;);background-size: cover;">
+    <header class="text-center text-white masthead" style="background: url(&quot;static/assets/img/header.jpg&quot;);background-size: cover;">
         <div class="overlay" style="filter: blur(0px) brightness(0%);opacity: 0.50;"></div>
         <div class="container">
             <div class="row">
@@ -23,15 +23,15 @@
                     </div>
                     <div class="row people">
                         <div class="col-md-6 col-lg-6 col-xxl-5 offset-xxl-1 item">
-                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="assets/img/a.jpg">
-                                <h3 class="name">Data Set A</h3>
+                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="{{ url_for('static',filename='assets/fe/img/a.jpg') }}">
+                                <a href="/setahome"> <h3 class="name">Data Set A</h3> </a>
                                 <p class="title">overall</p>
                                 <p class="text-center description">Contains the number of cases, recoveries, and deaths in the Philippines along with other Asian countries like Indonesia, Singapore, Malaysia, and Korea</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xxl-5 item">
-                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="assets/img/b.jpg">
-                                <h3 class="name">Data Set B</h3>
+                            <div class="box" style="height: 450px;"><img class="rounded-circle" src="{{ url_for('static',filename='assets/fe/img/b.jpg') }}">
+                                <a href="/setbhome"> <h3 class="name">Data Set B</h3> </a>
                                 <p class="title">Demographics</p>
                                 <p class="description">Demographic statistics of COVID-19 cases in the Philippines by age, gender, province, and city.&nbsp; Also includes certain cases from the NCR.</p>
                             </div>

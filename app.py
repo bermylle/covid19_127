@@ -30,6 +30,14 @@ mysql = MySQL(app)
 def index():
 	return render_template('homepage.html')
 
+@app.route('/setahome')
+def setahome():
+	return render_template('a_dataset.html')
+
+@app.route('/setbhome')
+def setbhome():
+	return render_template('b_dataset.html')
+
 
 @app.route('/dataseta')
 def dataseta():

@@ -16,9 +16,9 @@
         <!-- DataTables --> 
         <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
 
-        <link rel="stylesheet" href="{{ url_for('assets',filename='fe/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='assets/fe/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
-        <link rel="stylesheet" href="{{ url_for('assets',filename='fe/css/Team-Boxed.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='assets/fe/css/Team-Boxed.css') }}">
         
     </head>
 
@@ -30,7 +30,8 @@
         {% block main %} {% endblock %} 
         {% block homepage %} {% endblock %} 
         {% block dataseta %} {% endblock %} 
-        
+        {% block setahome %} {% endblock %}
+        {% block setbhome %} {% endblock %} 
         {% block datasetb %} {% endblock %}
 
         <!-- Bootstrap 4 & Data Tables -->
