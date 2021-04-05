@@ -66,6 +66,119 @@ def dataseta():
 		prk_deaths_total = prk_deaths_total, 
 		ph_deaths_total = ph_deaths_total)
 
+# DATA SET A ROUTES
+
+
+@app.route('/PhilippineCases')
+def phcases():
+	return render_template('PhilippineCases.html',
+
+                        ph_confirmed=ph_confirmed,
+                        ph_recoveries=ph_recoveries,
+                        ph_deaths=ph_deaths,
+                        ph_dates=ph_dates,
+
+                        ind_confirmed_total=ind_confirmed_total,
+                        sgp_confirmed_total=sgp_confirmed_total,
+                        mys_confirmed_total=mys_confirmed_total,
+                        prk_confirmed_total=prk_confirmed_total,
+                        ph_confirmed_total=ph_confirmed_total,
+
+                        ind_recoveries_total=ind_recoveries_total,
+                        sgp_recoveries_total=sgp_recoveries_total,
+                        mys_recoveries_total=mys_recoveries_total,
+                        prk_recoveries_total=prk_recoveries_total,
+                        ph_recoveries_total=ph_recoveries_total,
+
+                        ind_deaths_total=ind_deaths_total,
+                        sgp_deaths_total=sgp_deaths_total,
+                        mys_deaths_total=mys_deaths_total,
+                        prk_deaths_total=prk_deaths_total,
+                        ph_deaths_total=ph_deaths_total)
+
+
+@app.route('/ConfirmedCases')
+def confirmedcases():
+	return render_template('ConfirmedCases.html',
+
+                        ph_confirmed=ph_confirmed,
+                        ph_recoveries=ph_recoveries,
+                        ph_deaths=ph_deaths,
+                        ph_dates=ph_dates,
+
+                        ind_confirmed_total=ind_confirmed_total,
+                        sgp_confirmed_total=sgp_confirmed_total,
+                        mys_confirmed_total=mys_confirmed_total,
+                        prk_confirmed_total=prk_confirmed_total,
+                        ph_confirmed_total=ph_confirmed_total,
+
+                        ind_recoveries_total=ind_recoveries_total,
+                        sgp_recoveries_total=sgp_recoveries_total,
+                        mys_recoveries_total=mys_recoveries_total,
+                        prk_recoveries_total=prk_recoveries_total,
+                        ph_recoveries_total=ph_recoveries_total,
+
+                        ind_deaths_total=ind_deaths_total,
+                        sgp_deaths_total=sgp_deaths_total,
+                        mys_deaths_total=mys_deaths_total,
+                        prk_deaths_total=prk_deaths_total,
+                        ph_deaths_total=ph_deaths_total)
+
+
+@app.route('/TotalRecoveries')
+def totalrecoveries():
+	return render_template('TotalRecoveries.html',
+
+                        ph_confirmed=ph_confirmed,
+                        ph_recoveries=ph_recoveries,
+                        ph_deaths=ph_deaths,
+                        ph_dates=ph_dates,
+
+                        ind_confirmed_total=ind_confirmed_total,
+                        sgp_confirmed_total=sgp_confirmed_total,
+                        mys_confirmed_total=mys_confirmed_total,
+                        prk_confirmed_total=prk_confirmed_total,
+                        ph_confirmed_total=ph_confirmed_total,
+
+                        ind_recoveries_total=ind_recoveries_total,
+                        sgp_recoveries_total=sgp_recoveries_total,
+                        mys_recoveries_total=mys_recoveries_total,
+                        prk_recoveries_total=prk_recoveries_total,
+                        ph_recoveries_total=ph_recoveries_total,
+
+                        ind_deaths_total=ind_deaths_total,
+                        sgp_deaths_total=sgp_deaths_total,
+                        mys_deaths_total=mys_deaths_total,
+                        prk_deaths_total=prk_deaths_total,
+                        ph_deaths_total=ph_deaths_total)
+
+
+@app.route('/TotalDeaths')
+def totaldeaths():
+	return render_template('TotalDeaths.html',
+
+                        ph_confirmed=ph_confirmed,
+                        ph_recoveries=ph_recoveries,
+                        ph_deaths=ph_deaths,
+                        ph_dates=ph_dates,
+
+                        ind_confirmed_total=ind_confirmed_total,
+                        sgp_confirmed_total=sgp_confirmed_total,
+                        mys_confirmed_total=mys_confirmed_total,
+                        prk_confirmed_total=prk_confirmed_total,
+                        ph_confirmed_total=ph_confirmed_total,
+
+                        ind_recoveries_total=ind_recoveries_total,
+                        sgp_recoveries_total=sgp_recoveries_total,
+                        mys_recoveries_total=mys_recoveries_total,
+                        prk_recoveries_total=prk_recoveries_total,
+                        ph_recoveries_total=ph_recoveries_total,
+
+                        ind_deaths_total=ind_deaths_total,
+                        sgp_deaths_total=sgp_deaths_total,
+                        mys_deaths_total=mys_deaths_total,
+                        prk_deaths_total=prk_deaths_total,
+                        ph_deaths_total=ph_deaths_total)
 
 
 @app.route('/datasetb')
