@@ -1,0 +1,43 @@
+{% extends "dashboard.html" %}
+
+{% block sex %} 
+<section class="text-center bg-light features-icons">
+    <div class="container">
+        <section class="team-boxed">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center" id="title">Sex</h2>
+                    <!-- <p class="text-center" id="content"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida cum sociis natoque penatibus et magnis dis. Turpis egestas integer eget aliquet nibh praesent. Eu volutpat odio facilisis mauris sit amet massa vitae. In est ante in nibh mauris cursus mattis molestie. Eget dolor morbi non arcu risus quis varius quam quisque. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque.&nbsp;<br><br></p> -->
+                    <div class="row" id="graphContainer">
+                        <canvas id="bar-graph-agegrp" width="800" height="450" style="display: none"></canvas>
+                        <canvas id="doughnut-chart-sex" width="800" height="450"></canvas>
+                        <!-- <canvas id="bar-chart-grouped-location-rpr" width="800" height="450"></canvas>
+                        <canvas id="bar-chart-grouped-location-mcr" width="800" height="450"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	//[Age Group]
+	var labels = JSON.parse('{{ labels|tojson|safe }}')
+	var data = JSON.parse('{{ data|tojson|safe }}')
+
+	//[Sex]
+	var labels_sex = JSON.parse('{{ labels_sex|tojson|safe }}')
+	var data_sex = JSON.parse('{{ data_sex|tojson|safe }}')
+
+	//[Rpr]
+	var labels_rpr = JSON.parse('{{ labels_rpr|tojson|safe }}')
+	var data_rpr = JSON.parse('{{ data_rpr|tojson|safe }}')
+
+	//[Rpr]
+	var labels_mcr= JSON.parse('{{ labels_mcr|tojson|safe }}')
+	var data_mcr = JSON.parse('{{ data_mcr|tojson|safe }}')
+
+	var data_table = JSON.parse('{{ data_table|tojson|safe }}')
+
+</script>
+{% endblock %}

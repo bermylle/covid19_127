@@ -244,6 +244,321 @@ def datasetb():
 		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
 		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
 
+@app.route('/agegroup')
+def agegroup():
+	#SQL queries
+
+	# [Age Group]
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup DESC''')
+	result = cur.fetchall()
+	
+	AgeGroup = []
+	AgeGroup_Count = []
+
+	for values in result:
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+
+	# [Sex]
+	cur_sex = mysql.connection.cursor()
+	cur_sex.execute('''SELECT Sex, COUNT(*) AS total_count FROM datasetb GROUP BY Sex;''')
+	result_sex = cur_sex.fetchall()
+
+	sex_data = []
+	sex_data_count = []
+
+	for values in result_sex:
+		sex_data.append(values["Sex"])
+		sex_data_count.append(values["total_count"])
+
+	# [RegProvRes]
+	cur_rpr = mysql.connection.cursor()
+	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
+	result_rpr = cur_rpr.fetchall()
+
+	rpr_data = []
+	rpr_data_count = []
+
+	for values in result_rpr:
+		rpr_data.append(values["RegProvRes"])
+		rpr_data_count.append(values["total_count"])
+
+	# [MuniCityRes]
+	cur_mcr = mysql.connection.cursor()
+	cur_mcr.execute('''SELECT DISTINCT (MuniCityRes), COUNT(*) AS total_count FROM datasetb GROUP BY MuniCityRes ORDER BY total_count''')
+	result_mcr = cur_mcr.fetchall()
+
+	mcr_data = []
+	mcr_data_count = []
+
+	for values in result_mcr:
+		mcr_data.append(values["MuniCityRes"])
+		mcr_data_count.append(values["total_count"])
+
+	# TABLE
+	cur_table = mysql.connection.cursor()
+	cur_table.execute(''' SELECT * FROM datasetb''')
+	result_table = cur_table.fetchall()
+
+
+	return render_template('agegroup.html', labels = AgeGroup, 
+		data = AgeGroup_Count ,labels_sex = sex_data, data_sex = sex_data_count, 
+		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
+		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
+
+@app.route('/sex')
+def sex():
+	#SQL queries
+
+	# [Age Group]
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup DESC''')
+	result = cur.fetchall()
+	
+	AgeGroup = []
+	AgeGroup_Count = []
+
+	for values in result:
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+
+	# [Sex]
+	cur_sex = mysql.connection.cursor()
+	cur_sex.execute('''SELECT Sex, COUNT(*) AS total_count FROM datasetb GROUP BY Sex;''')
+	result_sex = cur_sex.fetchall()
+
+	sex_data = []
+	sex_data_count = []
+
+	for values in result_sex:
+		sex_data.append(values["Sex"])
+		sex_data_count.append(values["total_count"])
+
+	# [RegProvRes]
+	cur_rpr = mysql.connection.cursor()
+	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
+	result_rpr = cur_rpr.fetchall()
+
+	rpr_data = []
+	rpr_data_count = []
+
+	for values in result_rpr:
+		rpr_data.append(values["RegProvRes"])
+		rpr_data_count.append(values["total_count"])
+
+	# [MuniCityRes]
+	cur_mcr = mysql.connection.cursor()
+	cur_mcr.execute('''SELECT DISTINCT (MuniCityRes), COUNT(*) AS total_count FROM datasetb GROUP BY MuniCityRes ORDER BY total_count''')
+	result_mcr = cur_mcr.fetchall()
+
+	mcr_data = []
+	mcr_data_count = []
+
+	for values in result_mcr:
+		mcr_data.append(values["MuniCityRes"])
+		mcr_data_count.append(values["total_count"])
+
+	# TABLE
+	cur_table = mysql.connection.cursor()
+	cur_table.execute(''' SELECT * FROM datasetb''')
+	result_table = cur_table.fetchall()
+
+
+	return render_template('sex.html', labels = AgeGroup, 
+		data = AgeGroup_Count ,labels_sex = sex_data, data_sex = sex_data_count, 
+		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
+		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
+
+@app.route('/provinceregion')
+def provinceregion():
+	#SQL queries
+
+	# [Age Group]
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup DESC''')
+	result = cur.fetchall()
+	
+	AgeGroup = []
+	AgeGroup_Count = []
+
+	for values in result:
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+
+	# [Sex]
+	cur_sex = mysql.connection.cursor()
+	cur_sex.execute('''SELECT Sex, COUNT(*) AS total_count FROM datasetb GROUP BY Sex;''')
+	result_sex = cur_sex.fetchall()
+
+	sex_data = []
+	sex_data_count = []
+
+	for values in result_sex:
+		sex_data.append(values["Sex"])
+		sex_data_count.append(values["total_count"])
+
+	# [RegProvRes]
+	cur_rpr = mysql.connection.cursor()
+	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
+	result_rpr = cur_rpr.fetchall()
+
+	rpr_data = []
+	rpr_data_count = []
+
+	for values in result_rpr:
+		rpr_data.append(values["RegProvRes"])
+		rpr_data_count.append(values["total_count"])
+
+	# [MuniCityRes]
+	cur_mcr = mysql.connection.cursor()
+	cur_mcr.execute('''SELECT DISTINCT (MuniCityRes), COUNT(*) AS total_count FROM datasetb GROUP BY MuniCityRes ORDER BY total_count''')
+	result_mcr = cur_mcr.fetchall()
+
+	mcr_data = []
+	mcr_data_count = []
+
+	for values in result_mcr:
+		mcr_data.append(values["MuniCityRes"])
+		mcr_data_count.append(values["total_count"])
+
+	# TABLE
+	cur_table = mysql.connection.cursor()
+	cur_table.execute(''' SELECT * FROM datasetb''')
+	result_table = cur_table.fetchall()
+
+
+	return render_template('provinceregion.html', labels = AgeGroup, 
+		data = AgeGroup_Count ,labels_sex = sex_data, data_sex = sex_data_count, 
+		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
+		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
+
+@app.route('/citymunicipality')
+def citymunicipality():
+	#SQL queries
+
+	# [Age Group]
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup DESC''')
+	result = cur.fetchall()
+	
+	AgeGroup = []
+	AgeGroup_Count = []
+
+	for values in result:
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+
+	# [Sex]
+	cur_sex = mysql.connection.cursor()
+	cur_sex.execute('''SELECT Sex, COUNT(*) AS total_count FROM datasetb GROUP BY Sex;''')
+	result_sex = cur_sex.fetchall()
+
+	sex_data = []
+	sex_data_count = []
+
+	for values in result_sex:
+		sex_data.append(values["Sex"])
+		sex_data_count.append(values["total_count"])
+
+	# [RegProvRes]
+	cur_rpr = mysql.connection.cursor()
+	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
+	result_rpr = cur_rpr.fetchall()
+
+	rpr_data = []
+	rpr_data_count = []
+
+	for values in result_rpr:
+		rpr_data.append(values["RegProvRes"])
+		rpr_data_count.append(values["total_count"])
+
+	# [MuniCityRes]
+	cur_mcr = mysql.connection.cursor()
+	cur_mcr.execute('''SELECT DISTINCT (MuniCityRes), COUNT(*) AS total_count FROM datasetb GROUP BY MuniCityRes ORDER BY total_count''')
+	result_mcr = cur_mcr.fetchall()
+
+	mcr_data = []
+	mcr_data_count = []
+
+	for values in result_mcr:
+		mcr_data.append(values["MuniCityRes"])
+		mcr_data_count.append(values["total_count"])
+
+	# TABLE
+	cur_table = mysql.connection.cursor()
+	cur_table.execute(''' SELECT * FROM datasetb''')
+	result_table = cur_table.fetchall()
+
+
+	return render_template('citymunicipality.html', labels = AgeGroup, 
+		data = AgeGroup_Count ,labels_sex = sex_data, data_sex = sex_data_count, 
+		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
+		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
+
+@app.route('/table')
+def table():
+	#SQL queries
+
+	# [Age Group]
+	cur = mysql.connection.cursor()
+	cur.execute('''SELECT AgeGroup, COUNT(*) AS total_count FROM datasetb GROUP BY AgeGroup ORDER BY AgeGroup DESC''')
+	result = cur.fetchall()
+	
+	AgeGroup = []
+	AgeGroup_Count = []
+
+	for values in result:
+		AgeGroup.append(values["AgeGroup"])
+		AgeGroup_Count.append(values["total_count"])
+
+	# [Sex]
+	cur_sex = mysql.connection.cursor()
+	cur_sex.execute('''SELECT Sex, COUNT(*) AS total_count FROM datasetb GROUP BY Sex;''')
+	result_sex = cur_sex.fetchall()
+
+	sex_data = []
+	sex_data_count = []
+
+	for values in result_sex:
+		sex_data.append(values["Sex"])
+		sex_data_count.append(values["total_count"])
+
+	# [RegProvRes]
+	cur_rpr = mysql.connection.cursor()
+	cur_rpr.execute('''SELECT DISTINCT (RegProvRes), COUNT(*) AS total_count FROM datasetb GROUP BY RegProvRes ORDER BY total_count''')
+	result_rpr = cur_rpr.fetchall()
+
+	rpr_data = []
+	rpr_data_count = []
+
+	for values in result_rpr:
+		rpr_data.append(values["RegProvRes"])
+		rpr_data_count.append(values["total_count"])
+
+	# [MuniCityRes]
+	cur_mcr = mysql.connection.cursor()
+	cur_mcr.execute('''SELECT DISTINCT (MuniCityRes), COUNT(*) AS total_count FROM datasetb GROUP BY MuniCityRes ORDER BY total_count''')
+	result_mcr = cur_mcr.fetchall()
+
+	mcr_data = []
+	mcr_data_count = []
+
+	for values in result_mcr:
+		mcr_data.append(values["MuniCityRes"])
+		mcr_data_count.append(values["total_count"])
+
+	# TABLE
+	cur_table = mysql.connection.cursor()
+	cur_table.execute(''' SELECT * FROM datasetb''')
+	result_table = cur_table.fetchall()
+
+
+	return render_template('table.html', labels = AgeGroup, 
+		data = AgeGroup_Count ,labels_sex = sex_data, data_sex = sex_data_count, 
+		labels_rpr = rpr_data, data_rpr = rpr_data_count, 
+		labels_mcr = mcr_data, data_mcr = mcr_data_count, data_table = result_table)
+
 if __name__ == "__main__":
     app.run(debug=True)
 
