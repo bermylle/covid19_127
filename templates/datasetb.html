@@ -1,0 +1,55 @@
+{% extends "dashboard.html" %}
+
+{% block datasetb %} 
+
+<div style="width: 90%">
+	<canvas id="bar-graph-agegrp" width="800" height="450"></canvas>
+	<canvas id="doughnut-chart-sex" width="800" height="450"></canvas>
+	<canvas id="bar-chart-grouped-location-rpr" width="800" height="450"></canvas>
+	<canvas id="bar-chart-grouped-location-mcr" width="800" height="450"></canvas>
+</div>
+<table class="table" id = "table_data">
+	<thead>
+    <tr>
+      <th scope="col">Case Code</th>
+      <th scope="col">Age Group</th>
+      <th scope="col">Sex</th>
+      <th scope="col">RegProvRes</th>
+      <th scope="col">MuniCityRes</th>
+    </tr>
+  </thead>
+{% for data in data_table %} 
+<tr>
+      <th scope="row">{{data.CaseCode}}</th>
+      <td>{{data.AgeGroup}}</td>
+      <td>{{data.Sex}}</td>
+      <td>{{data.RegProvRes}}</td>
+      <td>{{data.MuniCityRes}}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+
+<script type="text/javascript">
+	//[Age Group]
+	var labels = JSON.parse('{{ labels|tojson|safe }}')
+	var data = JSON.parse('{{ data|tojson|safe }}')
+
+	//[Sex]
+	var labels_sex = JSON.parse('{{ labels_sex|tojson|safe }}')
+	var data_sex = JSON.parse('{{ data_sex|tojson|safe }}')
+
+	//[Rpr]
+	var labels_rpr = JSON.parse('{{ labels_rpr|tojson|safe }}')
+	var data_rpr = JSON.parse('{{ data_rpr|tojson|safe }}')
+
+	//[Rpr]
+	var labels_mcr= JSON.parse('{{ labels_mcr|tojson|safe }}')
+	var data_mcr = JSON.parse('{{ data_mcr|tojson|safe }}')
+
+	var data_table = JSON.parse('{{ data_table|tojson|safe }}')
+
+</script>
+
+{% endblock %}

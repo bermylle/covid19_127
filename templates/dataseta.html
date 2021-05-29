@@ -1,0 +1,43 @@
+{% extends "dashboard.html" %}
+
+{% block dataseta %} 
+
+<div style="width: 90%">
+
+	<canvas id="line-chart-ph" width="800" height="450"></canvas>
+	<canvas id="bar-chart-confirmed-cases" width="800" height="450"></canvas>
+	<canvas id="bar-chart-recovery-cases" width="800" height="450"></canvas>
+	<canvas id="bar-chart-death-cases" width="800" height="450"></canvas>
+
+</div>
+<script type="text/javascript">
+	//ph data
+	var ph_recoveries = JSON.parse('{{ ph_recoveries|tojson|safe }}')
+	var ph_deaths = JSON.parse('{{ ph_deaths|tojson|safe }}');
+	var ph_dates = JSON.parse('{{ ph_dates|tojson|safe }}');
+	var ph_confirmed = JSON.parse('{{ ph_confirmed|tojson|safe }}');
+
+	//total confirmed data
+	var ph_confirmed_total = JSON.parse('{{ ph_confirmed_total|tojson|safe }}');
+	var ind_confirmed_total = JSON.parse('{{ ind_confirmed_total|tojson|safe }}');
+	var sgp_confirmed_total = JSON.parse('{{ sgp_confirmed_total|tojson|safe }}');
+	var mys_confirmed_total = JSON.parse('{{ mys_confirmed_total|tojson|safe }}');
+	var prk_confirmed_total = JSON.parse('{{ prk_confirmed_total|tojson|safe }}');
+
+	//total recoveries data
+	var ph_recoveries_total = JSON.parse('{{ ph_recoveries_total|tojson|safe }}');
+	var ind_recoveries_total = JSON.parse('{{ ind_recoveries_total|tojson|safe }}');
+	var sgp_recoveries_total = JSON.parse('{{ sgp_recoveries_total|tojson|safe }}');
+	var mys_recoveries_total = JSON.parse('{{ mys_recoveries_total|tojson|safe }}');
+	var prk_recoveries_total = JSON.parse('{{ prk_recoveries_total|tojson|safe }}');
+
+	//total deaths data
+	var ph_deaths_total = JSON.parse('{{ ph_deaths_total|tojson|safe }}');
+	var ind_deaths_total = JSON.parse('{{ ind_deaths_total|tojson|safe }}');
+	var sgp_deaths_total = JSON.parse('{{ sgp_deaths_total|tojson|safe }}');
+	var mys_deaths_total = JSON.parse('{{ mys_deaths_total|tojson|safe }}');
+	var prk_deaths_total = JSON.parse('{{ prk_deaths_total|tojson|safe }}');
+	
+</script>
+
+{% endblock %}
